@@ -2,7 +2,7 @@ package spoj;
 
 import java.util.Scanner;
 
-public class NWD {
+public class NWD_PP0501A {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 

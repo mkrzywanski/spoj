@@ -12,29 +12,29 @@ public class TABLICE_PP0502B {
         for(int i = 0; i < testsNumber; i++) {
             String[] stringNumbers = scanner.nextLine().split(" ");
 
-            Integer[] numbers = Arrays.stream(stringNumbers)
+            int[] numbers = Arrays.stream(stringNumbers)
                     .skip(1)
-                    .map(Integer::valueOf)
-                    .toArray(Integer[]::new);
+                    .mapToInt(Integer::parseInt)
+                    .toArray();
 
-            swap(numbers);
+            reverse(numbers);
             printArray(numbers);
         }
     }
 
-    private static void swap(Integer[] tab) {
-        for(int left = 0, right = tab.length - 1; left < right; left++, right--) {
-            tab[left] += tab[right];
-            tab[right] = tab[left] - tab[right];
-            tab[left] = tab[left] - tab[right];
+    private static void reverse(int[] array) {
+        for(int left = 0, right = array.length - 1; left < right; left++, right--) {
+            array[left] += array[right];
+            array[right] = array[left] - array[right];
+            array[left] = array[left] - array[right];
         }
     }
 
-    private static void printArray(Integer tab[]) {
-        for(int i = 0; i < tab.length - 1; i++) {
-            System.out.print(tab[i] + " ");
+    private static void printArray(int[] array) {
+        for(int i = 0; i < array.length - 1; i++) {
+            System.out.print(array[i] + " ");
         }
-        System.out.print(tab[tab.length-1]);
+        System.out.print(array[array.length-1]);
         System.out.print("\n");
     }
 }

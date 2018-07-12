@@ -1,18 +1,22 @@
 package spoj;
 
-import java.util.Scanner;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
 
 public class VSR {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    public static void main(String[] args) throws IOException {
+        BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
 
-        int testsNumber = Integer.valueOf(scanner.nextLine());
+        int testsNumber = Integer.valueOf(reader.readLine());
+
+        int v1,v2;
 
         for(int i = 0; i < testsNumber; i++) {
-            String[] numbers = scanner.nextLine().split(" ");
+            String[] numbers = reader.readLine().split(" ");
 
-            int v1 = Integer.valueOf(numbers[0]);
-            int v2 = Integer.valueOf(numbers[1]);
+            v1 = Integer.valueOf(numbers[0]);
+            v2 = Integer.valueOf(numbers[1]);
 
             System.out.println(mean_velocity(v1, v2));
         }

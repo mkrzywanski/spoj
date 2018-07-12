@@ -25,7 +25,7 @@ public class PP0601A2 {
             if(sequenceCounter == 3) {
                 break;
             }
-            
+
             firstNumber = secondNumber;
         }
     }

@@ -9,7 +9,7 @@ public class PRIME_T {
 
         int testsNumber = Integer.valueOf(scanner.nextLine());
 
-        for(int i = 0; i < testsNumber; i++) {
+        for (int i = 0; i < testsNumber; i++) {
             long number = scanner.nextLong();
             printAnswer(isPrime(number));
         }

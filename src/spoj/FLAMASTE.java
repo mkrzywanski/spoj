@@ -10,7 +10,7 @@ public class FLAMASTE {
 
         int testsNumber = Integer.valueOf(scanner.nextLine());
 
-        for(int i = 0; i < testsNumber; i++) {
+        for (int i = 0; i < testsNumber; i++) {
             String line = scanner.nextLine();
 
             StringBuilder output = new StringBuilder();
@@ -18,8 +18,8 @@ public class FLAMASTE {
             char[] lineChars = line.toCharArray();
             char currentSign = lineChars[0];
 
-            for(int j = 1; j < lineChars.length; j++) {
-                if(lineChars[j] == currentSign) {
+            for (int j = 1; j < lineChars.length; j++) {
+                if (lineChars[j] == currentSign) {
                     currentSignCount++;
                 } else {
                     String outputPart = produceOutputPart(currentSignCount, currentSign);
@@ -36,7 +36,7 @@ public class FLAMASTE {
     private static String produceOutputPart(int count, char sign) {
         StringBuilder result = new StringBuilder();
 
-        if(count > 2) {
+        if (count > 2) {
             result.append(sign);
             result.append(count);
         } else {

@@ -13,7 +13,7 @@ public class JSUMDUZE {
 
         BigInteger number1, number2;
 
-        for(int i = 0; i < testsNumber; i++) {
+        for (int i = 0; i < testsNumber; i++) {
             String[] numbers = reader.readLine().split(" ");
 
             number1 = new BigInteger(numbers[0]);

@@ -10,7 +10,7 @@ public class JPESEL {
 
         int testsNumber = Integer.valueOf(reader.readLine());
 
-        for(int i = 0; i < testsNumber; i++) {
+        for (int i = 0; i < testsNumber; i++) {
             int[] digits = reader.readLine().chars().map(sign -> sign - '0').toArray();
             boolean isValid = new Pesel(digits).validate();
             printAnswer(isValid);
@@ -46,7 +46,7 @@ public class JPESEL {
     }
 
     private static void printAnswer(boolean condition) {
-        if(condition) {
+        if (condition) {
             System.out.println("D");
         } else {
             System.out.println("N");
